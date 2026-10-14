@@ -8,6 +8,7 @@ class ClickCounter {
 public:
     explicit ClickCounter(std::string name) : name_(std::move(name)) {}
     void click() { ++count_; }
+    void reset() { count_ = 0; }
     void print() const
     {
         std::cout << name_ << ": " << count_ << " натискання\n";
@@ -26,6 +27,8 @@ int main()
     ClickCounter counter("Кнопка");
     counter.click();
     counter.click();
+    counter.print();
+    counter.reset();
     counter.print();
     return 0;
 }
