@@ -29,6 +29,7 @@ int main()
     counter.click();
     counter.print();
     counter.reset();
+    counter.click();
     counter.print();
     return 0;
 }
